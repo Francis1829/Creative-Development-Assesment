@@ -1,0 +1,137 @@
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-outout {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      transform: scale(0, 0);
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes Slide-in {
+    0% {
+      transform: translateX(-80%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes Slide-in2 {
+    0% {
+      transform: translateX(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-g{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.girl{
+    position: relative;
+    width: 420px;
+    top: 60px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.headline1{
+    position: absolute;
+    background: 0;
+    width: 700px;
+    bottom: -30px;
+    opacity: 0;
+    animation: zoom-out .6s 2.2s ease-in-out forwards;
+}
+.headline2{
+    position: absolute;
+    width: 700px;
+    top: -90px;
+    left:  350px;
+    animation: fade-outout 3s, Slide-in2 0.9s 3s ease-in-out;
+}
+
+.subheadline{
+    position: absolute;
+    width: 900px;
+    left: 90px;
+    top: -15px;
+    animation: fade-outout 4s, fade-in .6s 4s ease-in;
+}
+
+.learnmore{
+    position: absolute;
+    width: 400px;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: 0 auto;
+    animation: fade-outout 5s, fade-in .6s 5s ease-in;
+}
+
+.logo{
+    position: absolute;
+    width: 400px;
+    right: 300px;
+    top: -90px;
+    animation: fade-outout 6s, Slide-in 0.9s 6s ease-in-out;
+}
+
+.replay{
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    left: 20px;
+    margin: 0 auto;
+    animation: fade-outout 7s, fade-in 0.9s 7s ease-in-out;
+}
