@@ -7,7 +7,7 @@
     }
   }
   
-  @keyframes fade-outout {
+  @keyframes Transparent {
     0% {
       opacity: 0;
     }
@@ -21,7 +21,7 @@
       transform: scale(1, 1);
     }
     50% {
-      transform: scale(1.1, 1.1);
+      transform: scale(1.2, 1.2);
     }
     100% {
       transform: scale(0, 0);
@@ -37,7 +37,7 @@
     }
   }
   
-  @keyframes Slide-in {
+  @keyframes Left-in {
     0% {
       transform: translateX(-80%);
       opacity: 0;
@@ -46,9 +46,9 @@
       transform: translateX(0%);
     }
   }
-  @keyframes Slide-in2 {
+  @keyframes Right-in{
     0% {
-      transform: translateX(30%);
+      transform: translateX(80%);
       opacity: 0;
     }
     100% {
@@ -70,68 +70,60 @@ body{
     align-items: center;
 }
 
-.bg-g{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+.header{
+  background-image: url(/background.png);
+  width: 700px;
+  height: 616px;
+  position: relative;
+  top: 0;
 }
 
 .girl{
-    position: relative;
-    width: 420px;
-    top: 60px;
-    opacity: 0;
-    transition: opacity 2s ease;
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  animation: fade-in 0.8s ease-in,
+   fade-out 0.8s 1.8s ease-out forwards;;
 }
 
 .headline1{
-    position: absolute;
-    background: 0;
-    width: 700px;
-    bottom: -30px;
-    opacity: 0;
-    animation: zoom-out .6s 2.2s ease-in-out forwards;
+  position: absolute;
+  bottom: 70px;
+  left: 40px;
+  animation: Transparent 1s ease-in, Left-in .3s 1s ease-in, zoom-out 0.5s 3s ease-in-out forwards;;
 }
+
 .headline2{
-    position: absolute;
-    width: 700px;
-    top: -90px;
-    left:  350px;
-    animation: fade-outout 3s, Slide-in2 0.9s 3s ease-in-out;
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  animation: Transparent 2s ease-in, Right-in .9s 2s ease-in;
 }
 
 .subheadline{
-    position: absolute;
-    width: 900px;
-    left: 90px;
-    top: -15px;
-    animation: fade-outout 4s, fade-in .6s 4s ease-in;
+  position: absolute;
+  top: 210px;
+  right: -10px;
+  animation: Transparent 4s, fade-in .3s 4s ease-in;
 }
 
 .learnmore{
-    position: absolute;
-    width: 400px;
-    left: 0;
-    right: 0;
-    bottom: 100px;
-    margin: 0 auto;
-    animation: fade-outout 5s, fade-in .6s 5s ease-in;
+  position: absolute;
+  bottom: 70px;
+  right: 130px;
+  animation: Transparent 5s, fade-in .3s 5s ease-in;
 }
 
 .logo{
-    position: absolute;
-    width: 400px;
-    right: 300px;
-    top: -90px;
-    animation: fade-outout 6s, Slide-in 0.9s 6s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 45px;
+  animation: Transparent 6s, Left-in .3s 6s ease-in;
 }
 
 .replay{
-    position: absolute;
-    bottom: 40px;
-    right: 0;
-    left: 20px;
-    margin: 0 auto;
-    animation: fade-outout 7s, fade-in 0.9s 7s ease-in-out;
+  position: absolute;
+  bottom: 0px;
+  right: 290px;
+  animation: Transparent 7s, fade-in .3s 7s ease-in;
 }
