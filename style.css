@@ -81,6 +81,8 @@ body{
 .girl{
   position: absolute;
   left: 100px;
+  height: 340px;
+  width: 500px;
   top: 60px;
   animation: fade-in 0.8s ease-in,
    fade-out 0.8s 1.8s ease-out forwards;;
@@ -88,6 +90,8 @@ body{
 
 .headline1{
   position: absolute;
+  width: 400px;
+  height: 150px;
   bottom: 70px;
   left: 40px;
   animation: Transparent 1s ease-in, Left-in .3s 1s ease-in, zoom-out 0.5s 3s ease-in-out forwards;;
